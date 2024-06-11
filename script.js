@@ -57,11 +57,13 @@ function createBookCard(book, index) {
     read.classList.add('book-read');
     book.read ? read.textContent = 'Read' : read.textContent = 'Not Read'
     book.read ? read.classList.add('read') : read.classList.add('not-read')
-    read.addEventListener("click", (index) => {
-        book.read = !book.read
-        book.read ? read.textContent = 'Read' : read.textContent = 'Not Read'
-        read.classList.toggle('read');
-        read.classList.toggle('not-read');
+    read.addEventListener("click", (e) => {
+        thisRead = e.currentTarget;
+        i = thisRead.parentNode.id;
+        myLibrary[i].read = !myLibrary[i].read;
+        myLibrary[i].read ? thisRead.textContent = 'Read' : thisRead.textContent = 'Not Read';
+        thisRead.classList.toggle('read');
+        thisRead.classList.toggle('not-read');
     })
     card.appendChild(read);
 
