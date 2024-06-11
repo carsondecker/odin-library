@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --red: #7c0000;
+    --gray: #444444;
+    --dark-red: #3e0000;    
+    --dark-gray: #333333;
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    all: unset;
+}
+
+body {
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+    align-items: center;
+}
+
+dialog::backdrop {
+    background-color: transparent;
+}
+
+.header {
+    background-color: var(--dark-gray);
+    box-shadow: 0px 2px 5px black;
+    height: 100%;
+    padding: 0px 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    z-index: 1;
+}
+
+.logo {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 60px 1fr 80px;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+
+    /* for future reference here's the link to filter svgs: https://codepen.io/sosuke/pen/Pjoqqp*/
+    /* filter: invert(7%) sepia(86%) saturate(4000%) hue-rotate(354deg) brightness(108%) contrast(112%); */
+    filter: invert(99%) sepia(1%) saturate(0%) hue-rotate(314deg) brightness(107%) contrast(101%);
+}
+
+.logo span {
+    color: white;
+    font-size: 48px;
+    font-weight: bolder;
+}
+
+#new-book {
+    background-color: transparent;
+    border-radius: 20px;
+    justify-self: self-end;
+    text-align: center;
+    height: 80px;
+    width: 80px;
+}
+
+#new-book:hover {
+    background-color: #222222;
+}
+
+#new-book:active {
+    background-color: #111111;
+}
+
+#new-book img {
+    filter: invert(99%) sepia(1%) saturate(0%) hue-rotate(314deg) brightness(107%) contrast(101%);
+    height: 60px;
+}
+
+.book-container {
+    height: 100%;
+    background-color: var(--gray);
+}
