@@ -45,12 +45,12 @@ function createBookCard(book, index) {
 
     author = document.createElement('span');
     author.classList.add('book-author');
-    author.textContent = book.author;
+    author.textContent = `By: ${book.author}`;
     card.appendChild(author);
 
     pages = document.createElement('span');
     pages.classList.add('book-pages');
-    pages.textContent = book.pages;
+    pages.textContent = `Pages: ${book.pages}`;
     card.appendChild(pages);
 
     read = document.createElement('button');
